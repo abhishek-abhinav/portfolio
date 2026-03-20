@@ -1346,3 +1346,142 @@ h6 {
         gap: 3rem;
     }
 }
+
+
+/* ==========================================
+   GLOBAL RESPONSIVE FIXES
+   ========================================== */
+
+/* Better container padding for mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.2rem;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* ==========================================
+   HERO FIX (BIGGEST ISSUE)
+   ========================================== */
+
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-title .greeting {
+        font-size: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-desc {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+
+    .hero-cta {
+        gap: 1rem;
+    }
+}
+
+/* ==========================================
+   ABOUT IMAGE FIX (VERY IMPORTANT)
+   ========================================== */
+
+@media (max-width: 768px) {
+    .image-wrapper {
+        height: 280px;
+    }
+
+    .about-image img {
+        /* height: 100% !important; */
+        top: 20px;
+        object-fit: cover;
+    }
+    .about-text > p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+}
+
+/* ==========================================
+   PROJECTS GRID FIX
+   ========================================== */
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .small-projects {
+        grid-template-columns: 1fr;
+    }
+
+    .project-img {
+        height: 180px;
+    }
+}
+
+/* ==========================================
+   DESIGN GRID FIX
+   ========================================== */
+
+@media (max-width: 768px) {
+    .design-card {
+        height: 220px;
+    }
+}
+
+/* ==========================================
+   AUTOMATION CARDS FIX
+   ========================================== */
+
+@media (max-width: 768px) {
+    .automation-card {
+        padding: 1.5rem;
+    }
+}
+
+/* ==========================================
+   CONTACT FIX
+   ========================================== */
+
+@media (max-width: 768px) {
+    .contact-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================
+   NAVBAR FIX (IMPORTANT)
+   ========================================== */
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 50px !important;
+    }
+
+    .nav {
+        padding: 0 10px;
+    }
+}
