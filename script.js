@@ -141,11 +141,11 @@ document.querySelectorAll('.automation-card').forEach(card => {
    GSAP Scroll Animations
    ========================================== */
 // Hero Animations
-gsap.from('.hero-title .greeting', { opacity: 0, y: 30, duration: 1, delay: 0.2 });
-gsap.from('.hero-title .name', { opacity: 0, y: 50, duration: 1, delay: 0.4 });
-gsap.from('.hero-subtitle', { opacity: 0, y: 30, duration: 1, delay: 0.6 });
-gsap.from('.hero-desc', { opacity: 0, y: 30, duration: 1, delay: 0.8 });
-gsap.from('.hero-cta', { opacity: 0, y: 30, duration: 1, delay: 1 });
+gsap.from('.hero-title .greeting', { opacity: 0, y: 30, duration: 1, delay: 0.2, clearProps: "all" });
+gsap.from('.hero-title .name', { opacity: 0, y: 50, duration: 1, delay: 0.4, clearProps: "all" });
+gsap.from('.hero-subtitle', { opacity: 0, y: 30, duration: 1, delay: 0.6, clearProps: "all" });
+gsap.from('.hero-desc', { opacity: 0, y: 30, duration: 1, delay: 0.8, clearProps: "all" });
+gsap.from('.hero-cta', { opacity: 0, y: 30, duration: 1, delay: 1, clearProps: "all" });
 
 // Section Titles
 gsap.utils.toArray('.section-title').forEach(title => {
@@ -157,7 +157,8 @@ gsap.utils.toArray('.section-title').forEach(title => {
         },
         opacity: 0,
         y: 50,
-        duration: 0.8
+        duration: 0.8,
+        clearProps: "all"
     });
 });
 
@@ -170,7 +171,8 @@ gsap.from('.about-text p', {
     opacity: 0,
     x: -50,
     duration: 1,
-    stagger: 0.1
+    stagger: 0.1,
+    clearProps: "all"
 });
 
 gsap.from('.stat-item', {
@@ -181,7 +183,8 @@ gsap.from('.stat-item', {
     opacity: 0,
     y: 40,
     duration: 0.8,
-    stagger: 0.1
+    stagger: 0.1,
+    clearProps: "all"
 });
 
 gsap.from('.image-wrapper', {
@@ -192,7 +195,8 @@ gsap.from('.image-wrapper', {
     opacity: 0,
     x: 50,
     duration: 1,
-    rotation: 5
+    rotation: 5,
+    clearProps: "all"
 });
 
 // Skills Section
@@ -204,7 +208,8 @@ gsap.from('.skill-category', {
     opacity: 0,
     y: 50,
     duration: 0.8,
-    stagger: 0.1
+    stagger: 0.1,
+    clearProps: "all"
 });
 
 // Projects Section
@@ -216,7 +221,8 @@ gsap.from('.project-card', {
     opacity: 0,
     y: 50,
     duration: 0.8,
-    stagger: 0.1
+    stagger: 0.1,
+    clearProps: "all"
 });
 
 // Automations Section
@@ -229,7 +235,8 @@ gsap.from('.automation-card', {
     opacity: 0,
     y: 50,
     duration: 0.8,
-    stagger: 0.1
+    stagger: 0.1,
+    clearProps: "all"
 });
 
 
@@ -242,7 +249,8 @@ gsap.from('.timeline-item', {
     opacity: 0,
     x: -50,
     duration: 0.8,
-    stagger: 0.3
+    stagger: 0.3,
+    clearProps: "all"
 });
 
 // Contact Section
@@ -253,7 +261,8 @@ gsap.from('.contact-info', {
     },
     opacity: 0,
     x: -50,
-    duration: 1
+    duration: 1,
+    clearProps: "all"
 });
 
 gsap.from('.contact-form', {
@@ -263,7 +272,8 @@ gsap.from('.contact-form', {
     },
     opacity: 0,
     x: 50,
-    duration: 1
+    duration: 1,
+    clearProps: "all"
 });
 
 document.querySelectorAll('.expand-btn').forEach(btn => {
@@ -314,6 +324,10 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(document.querySelector(".about-stats"));
+
+window.addEventListener("load", () => {
+    ScrollTrigger.refresh();
+});
 
 
 ScrollTrigger.refresh();
